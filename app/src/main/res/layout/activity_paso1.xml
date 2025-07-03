@@ -1,59 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="24dp"
+    <!-- Fondo de hojas -->
+    <ImageView
+        android:id="@+id/fondo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_hojas"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name" />
 
-        <EditText android:id="@+id/etIdentificador"
-            android:hint="Identificador del árbol"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <!-- Contenedor desplazable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <EditText android:id="@+id/etNombreCientifico"
-            android:hint="Nombre científico (en cursiva)"
-            android:textStyle="italic"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <!-- Contenido principal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
 
-        <EditText android:id="@+id/etNombreComun"
-            android:hint="Nombre común"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entrada de datos"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="16dp" />
 
-        <EditText android:id="@+id/etFamilia"
-            android:hint="Nombre de la familia"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <!-- Contenedor pastel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="600dp"
+                android:background="@drawable/bg_rounded_container"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_marginBottom="24dp">
 
-        <TextView android:text="¿Es especie original del lugar?"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        <RadioGroup android:id="@+id/rgEspecieOriginal"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <RadioButton android:id="@+id/rbOriginalSi" android:text="Sí"/>
-            <RadioButton android:id="@+id/rbOriginalNo" android:text="No"/>
-        </RadioGroup>
+                <!-- Campos -->
+                <EditText
+                    android:id="@+id/etIdentificador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Identificador del árbol" />
 
-        <EditText android:id="@+id/etClasificacion"
-            android:hint="Clasificación taxonómica"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/etNombreCientifico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre científico (en cursiva)"
+                    android:textStyle="italic" />
 
-        <EditText android:id="@+id/etLatitud"
-            android:hint="Latitud"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/etNombreComun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre común" />
 
-        <EditText android:id="@+id/etLongitud"
-            android:hint="Longitud"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/etFamilia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre de la familia" />
 
-        <Button android:id="@+id/btnObtenerCoordenadas"
-            android:text="Obtener coordenadas actuales"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Es especie original del lugar?" />
 
-        <Button android:id="@+id/btnSiguiente"
-            android:text="Siguiente"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"/>
+                <RadioGroup
+                    android:id="@+id/rgEspecieOriginal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-    </LinearLayout>
-</ScrollView>
+                    <RadioButton
+                        android:id="@+id/rbOriginalSi"
+                        android:text="Sí" />
+
+                    <RadioButton
+                        android:id="@+id/rbOriginalNo"
+                        android:text="No" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/etClasificacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Clasificación taxonómica" />
+
+                <EditText
+                    android:id="@+id/etLatitud"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Latitud" />
+
+                <EditText
+                    android:id="@+id/etLongitud"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Longitud" />
+
+                <Button
+                    android:id="@+id/btnObtenerCoordenadas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Obtener coordenadas actuales"
+                    android:layout_marginTop="24dp" />
+
+                <Button
+                    android:id="@+id/btnSiguiente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Siguiente"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

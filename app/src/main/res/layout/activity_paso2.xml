@@ -1,112 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="24dp"
+    <!-- Fondo de hojas -->
+    <ImageView
+        android:id="@+id/fondo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_hojas"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name" />
 
-        <!-- Hábito de crecimiento -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hábito de crecimiento:" />
+    <!-- Scroll con contenido -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Spinner
-            android:id="@+id/spHabito"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp" />
+            android:orientation="vertical"
+            android:padding="24dp">
 
-        <!-- Tipo de crecimiento -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tipo de crecimiento:" />
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entrada de datos"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="16dp" />
 
-        <Spinner
-            android:id="@+id/spTipo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp" />
+            <!-- Contenedor pastel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="600dp"
+                android:background="@drawable/bg_rounded_container"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_marginBottom="24dp">
 
-        <!-- Altura -->
-        <EditText
-            android:id="@+id/etAltura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Altura estimada (m)"
-            android:inputType="numberDecimal"
-            android:minHeight="48dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp" />
+                <!-- Hábito de crecimiento -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hábito de crecimiento:" />
 
-        <!-- Método de altura -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Método de medición de altura:" />
+                <Spinner
+                    android:id="@+id/spHabito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <Spinner
-            android:id="@+id/spMetodoAltura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp" />
+                <!-- Tipo de crecimiento -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de crecimiento:" />
 
-        <!-- DAP -->
-        <EditText
-            android:id="@+id/etDAP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Diámetro a la altura del pecho (DAP)"
-            android:inputType="numberDecimal"
-            android:minHeight="48dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp" />
+                <Spinner
+                    android:id="@+id/spTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <!-- Método DAP -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Método de medición del DAP:" />
+                <!-- Altura -->
+                <EditText
+                    android:id="@+id/etAltura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Altura estimada (m)"
+                    android:inputType="numberDecimal" />
 
-        <Spinner
-            android:id="@+id/spMetodoDAP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp" />
+                <!-- Método de altura -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Método de medición de altura:" />
 
-        <!-- Estado de salud -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Estado de salud:" />
+                <Spinner
+                    android:id="@+id/spMetodoAltura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <Spinner
-            android:id="@+id/spSalud"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp" />
+                <!-- DAP -->
+                <EditText
+                    android:id="@+id/etDAP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Diámetro a la altura del pecho (DAP)"
+                    android:inputType="numberDecimal" />
 
-        <!-- Botón siguiente -->
-        <Button
-            android:id="@+id/btnSiguiente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Siguiente" />
-    </LinearLayout>
-</ScrollView>
+                <!-- Método DAP -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Método de medición del DAP:" />
+
+                <Spinner
+                    android:id="@+id/spMetodoDAP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- Estado de salud -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estado de salud:" />
+
+                <Spinner
+                    android:id="@+id/spSalud"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- Botón siguiente -->
+                <Button
+                    android:id="@+id/btnSiguiente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Siguiente" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- % de hojas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="% de hojas:" />
+
+        <SeekBar
+            android:id="@+id/sbHojas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tvHojasValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Estado de las hojas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado de las hojas:" />
+
+        <Spinner
+            android:id="@+id/spEstadoHojas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Foto de hojas -->
+        <Button
+            android:id="@+id/btnFotoHojas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomar/Seleccionar foto de hojas" />
+
+        <!-- % de flores -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="% de flores:" />
+
+        <SeekBar
+            android:id="@+id/sbFlores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tvFloresValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Foto de flores -->
+        <Button
+            android:id="@+id/btnFotoFlores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomar/Seleccionar foto de flores" />
+
+        <!-- % de frutos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="% de frutos:" />
+
+        <SeekBar
+            android:id="@+id/sbFrutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tvFrutosValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Madurez de los frutos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Madurez de los frutos:" />
+
+        <Spinner
+            android:id="@+id/spMadurezFrutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Foto de frutos -->
+        <Button
+            android:id="@+id/btnFotoFrutos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomar/Seleccionar foto de frutos" />
+
+        <!-- Botón siguiente -->
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Siguiente" />
+    </LinearLayout>
+</ScrollView>

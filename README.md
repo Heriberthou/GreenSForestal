@@ -65,7 +65,7 @@ Si decides implementar este sistema, se recomienda reemplazar estas imágenes po
 <footer style="font-size: 0.85rem; text-align: center; line-height: 1.6; padding: 1em;">
   <p>
     <a href="https://github.com/Heriberthou/ProyectoTW.git" target="_blank">
-      Sistema Web para La Café – Universidad del Mar
+      GreenSense – Universidad del Mar
     </a> © 2025 por 
     <a href="https://creativecommons.org" target="_blank">
       Cortes Perez Ivan Alexander, Galvan German Alondra, Gomez Bolaina Heriberto, Lopez Cruz Nelida y Quintas Rojas Abril Azeneth
